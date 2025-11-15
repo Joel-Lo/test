@@ -58,19 +58,30 @@ const gameOver = (isVictory) => {
     }
 
     if (!isVictory) {
+
         bgm.pause();
         bgm.currentTime = 0;
-        eliminated.play();
-
-        dieImg = new Image();
-        dieImg.src = "./Assets/gun.jpeg";
-        dieImg.onload = function(){
-            context.drawImage(dieImg, boardWidth / 2.5, boardHeight / 2.5);
-        }
+        setTimeout(() => {
+            eliminated.play();
+        },500)
+        setTimeout(() => {
+            const dieImg = document.createElement('img');
+            dieImg.src = "./Assets/gun.jpeg";
+            dieImg.style.position = "center";
+            dieImg.style.placeItems = "center";
+            dieImg.style.alignItems = "center";
+            dieImg.style.justifyContent = 'center';
+            dieImg.style.left = (window.innerWidth / 2.5) + "px";
+            dieImg.style.top = (window.innerHeight / 3) + "px";
+            dieImg.style.right = (window.innerWidth / 2.5) + "px";
+            dieImg.style.bottom = (window.innerHeight / 3) + "px";
+            dieImg.style.position = 'absolute';
+            document.body.appendChild(dieImg);
+        },3000)
 
         setTimeout(() => {
             hit.play()
-        }, 2500);
+        }, 4000);
 
         setTimeout(() => {
             Swal.fire({
