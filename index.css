@@ -38,14 +38,13 @@ h1 {
 
 .mode {
     font-weight: bold;
-    /* border: 2px solid #000000; */
     border-radius: 10px;
-    padding: 20px;
+    padding: 1px;
     margin-bottom: 12px;
     text-align: center;
     justify-content: center;
     width: 400px;
-    height: 200px;
+    height: 245px;
     place-items: center;
     color: #c7065a;
     background-color: rgba(0, 0, 0, 0.6);
