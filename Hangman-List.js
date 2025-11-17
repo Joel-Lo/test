@@ -216,7 +216,7 @@ const wordList =  [
         hint: "Data handled by other applications"
     },
     {
-        word: "Side-channel attacks",
+        word: "Side channel attacks",
         hint: "Information gained from the implementation of a computer system"
     },
     {
